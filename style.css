@@ -33,31 +33,34 @@ h1 {
     box-shadow: 0 8px 15px rgba(0,0,0,0.25);
 }
 
-/* ЗАГАЛЬНІ СТИЛІ ДЛЯ КЛАВІШ */
 .key, .num {
-    background: #f0f0f0;
+    background: white;
     border-radius: 6px;
-    border: 1px solid #bfbfbf;
+    border: 1px solid #bbb;
     text-align: center;
-    padding: 10px 6px;
+    padding: 10px 0;
     font-size: 14px;
     box-shadow: 0 3px 5px rgba(0,0,0,0.25);
     user-select: none;
-    transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+    transition: 0.15s;
+}
+
+.empty {
+    background: transparent;
+}
+
+.tall {
+    grid-row: span 2;
 }
 
 .key:hover, .num:hover {
-    background: #e2e2e2;
-    cursor: pointer;
+    background: #e6e6e6;
 }
 
 .key:active, .num:active {
-    background: #d0d0d0;
     transform: translateY(2px);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-/* ШИРШІ КЛАВІШІ */
 .backspace { grid-column: span 2; }
 .tab { grid-column: span 2; }
 .caps { grid-column: span 2; }
@@ -65,14 +68,5 @@ h1 {
 .shift-left { grid-column: span 2; }
 .shift-right { grid-column: span 3; }
 .space { grid-column: span 7; }
-.ctrl { grid-column: span 2; }
+
 .zero { grid-column: span 2; }
-
-/* НУМПАД — РОЗМІЩЕННЯ СПРАВА */
-.num {
-    grid-column: 19 / span 1;
-}
-
-/* ВЕРТИКАЛЬНІ КЛАВІШІ */
-.plus { grid-row: span 2; }
-.enter.num { grid-row: span 2 !important; }
