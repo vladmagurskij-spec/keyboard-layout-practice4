@@ -23,7 +23,7 @@ h1 {
 
 .keyboard {
     display: grid;
-    grid-template-columns: repeat(22, 1fr); /* 22 колонки для нумпаду */
+    grid-template-columns: repeat(22, 1fr);
     gap: 8px;
     max-width: 1400px;
     margin: 0 auto;
@@ -33,6 +33,7 @@ h1 {
     box-shadow: 0 8px 15px rgba(0,0,0,0.25);
 }
 
+/* ЗАГАЛЬНІ СТИЛІ ДЛЯ КЛАВІШ */
 .key, .num {
     background: #f0f0f0;
     border-radius: 6px;
@@ -45,7 +46,6 @@ h1 {
     transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
 }
 
-/* Стани клавіш */
 .key:hover, .num:hover {
     background: #e2e2e2;
     cursor: pointer;
@@ -57,7 +57,7 @@ h1 {
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-/* Ширші клавіші */
+/* ШИРШІ КЛАВІШІ */
 .backspace { grid-column: span 2; }
 .tab { grid-column: span 2; }
 .caps { grid-column: span 2; }
@@ -68,11 +68,11 @@ h1 {
 .ctrl { grid-column: span 2; }
 .zero { grid-column: span 2; }
 
-/* Нумпад праворуч */
+/* НУМПАД — РОЗМІЩЕННЯ СПРАВА */
 .num {
-    grid-column: 18 / span 1; /* нумпад починається з 18 колонки */
+    grid-column: 19 / span 1;
 }
 
-/* Плюс і Enter — вертикальні */
+/* ВЕРТИКАЛЬНІ КЛАВІШІ */
 .plus { grid-row: span 2; }
-.enter { grid-row: auto; }
+.enter.num { grid-row: span 2 !important; }
